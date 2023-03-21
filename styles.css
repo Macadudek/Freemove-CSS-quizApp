@@ -1,0 +1,81 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 120;
+}
+
+
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    border: 1px solid lightgray;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0 0 25px 0.5px;
+}
+
+.container #question-container h1 {
+    margin: 10px 0;
+}
+
+.container #question-container #question {
+    margin: 10px 0 30px;
+}
+
+.container #question-container .btn-grid {
+    display: grid;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue),10%, 95%);
+    border: 1px solid hsl(var(--hue),10%, 90%);
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    background-color: hsl(var(--hue-correct),100%, 35%);
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+    background-color: hsl(var(--hue-wrong),100%, 50%);
+}
+
+.start-btn, .next-btn {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+}
+
+.center-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}
